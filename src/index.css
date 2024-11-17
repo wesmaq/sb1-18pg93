@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+@layer components {
+  input {
+    @apply px-3 py-2 bg-white border shadow-sm border-gray-300 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-blue-500 block w-full rounded-md sm:text-sm focus:ring-1;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .fixed * {
+    visibility: visible;
+  }
+  .fixed {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
